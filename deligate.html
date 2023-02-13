@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>Explore Event Delegate</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Perspiciatis, suscipit unde.</li>
+            <li class="item">Illum, eveniet tempore.</li>
+            <li class="item">Doloribus, eaque sit?</li>
+            <li class="item">Et, ad aspernatur?</li>
+            <li class="item">Veniam, labore provident!</li>
+        </ul>
+        <button id="btn-add-item">Add Item</button>
+    </section>
+    <script>
+        document.getElementById('list-container').addEventListener('click',function(event){
+            // console.log(event.target)
+            event.target.parentNode.removeChild(event.target);
+        })
+        const items = document.getElementsByClassName('item');
+      for(const item of items){
+        item.addEventListener('click',function(event){
+            // console.log(item)/
+            // console.log(event.target.parentNode);/
+            event.target.parentNode.removeChild(event.target);
+        })
+      }
+
+
+      document.getElementById('btn-add-item').addEventListener('click',function(){
+        const listContainer = document.getElementById('list-container');
+  
+        const li = document.createElement('li');
+        li.innerText = 'Brand New Item Added';
+        listContainer.appendChild(li);
+
+
+      })
+    </script>
+    
+</body>
+</html>

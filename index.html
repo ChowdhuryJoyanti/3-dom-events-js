@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsS DOM EVENT JS</title>
+</head>
+<body>
+    
+    <h1 onclick="console.log('This is clicked')">Dom er ajke special  event</h1>
+    <button title="This is tooltip" onclick="console.log(89)">Click Me</button>
+    <button onclick="console.log(7)">Another Button</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>\
+    <!-- option 2 -->
+
+    <button onclick = "makeRed()">Make Red</button>
+    <!-- option 3 -->
+    <button id="make-blue">Make Blue</button>
+    <!-- option 3 .another -->
+    <button id="make-purple">Make purple</button>
+
+    <!-- option 4 -->
+    <button id="make-pink">Make Pink</button>
+
+   <!-- option 4 .another -->
+   <button id="make-green">Make Green</button>
+    <!-- option 4 .final -->
+    <button id="make-goldenrod">Make goldenrod</button>
+
+    <script src="js/event.js"></script>
+
+    <script>
+     document.getElementById('make-goldenrod').addEventListener('click', function(){
+        document.body.style.backgroundColor = 'goldenrod';
+     })
+    </script>
+
+
+
+</body>
+</html>
+
